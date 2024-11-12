@@ -1,0 +1,64 @@
+.app {
+  width: 100%;
+  background-color: #fff;
+  scrollbar-width: none !important;
+
+  :global {
+    * {
+      scrollbar-width: thin;
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #ddd;
+      border-radius: 3px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+      display: none;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #ddd;
+      border-radius: 3px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    }
+    ::-webkit-scrollbar-button {
+      display: none;
+    }
+    ::-webkit-scrollbar-corner {
+      background: #fafafa; 
+    }
+
+    button::-moz-focus-inner,
+    input[type="reset"]::-moz-focus-inner,
+    input[type="button"]::-moz-focus-inner,
+    input[type="submit"]::-moz-focus-inner,
+    input[type="file"] > input[type="button"]::-moz-focus-inner {
+      border: none;
+      padding: 0;
+    }
+
+    .ant-btn-sm span {
+      line-height: 24px;
+    }
+  }
+}
+
+html {
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+body {
+  :global {
+    .ant-dropdown .ant-dropdown-menu{
+      max-height: 350px;
+      overflow-y: auto;
+    }
+  }
+}
+
